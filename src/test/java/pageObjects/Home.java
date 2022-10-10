@@ -34,6 +34,7 @@ public class Home
 		driver.findElement(By.xpath("//input[@name='txtJourneyDate']")).click();
 		selectJourneyDate("16");		
 		driver.findElement(By.xpath("//input[@id='searchBtn']")).click();
+		sp.fixedWait(4);
 	}
 	public void selectJourneyDate(String mydate)
 	{

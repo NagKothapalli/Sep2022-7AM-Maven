@@ -10,6 +10,7 @@ public class DriverController
 	{
 		System.setProperty("webdriver.chrome.driver", "D:\\Softwares\\JarFiles\\chromedriver-win32-90\\chromedriver.exe");
 		driver = new ChromeDriver();//sesion - 1234
+		driver.manage().window().maximize();
 		return driver;
 	}
 

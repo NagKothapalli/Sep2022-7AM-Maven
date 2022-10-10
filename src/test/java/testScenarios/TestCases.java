@@ -15,9 +15,9 @@ public class TestCases
 	WebDriver driver = DriverController.getWebDriver(); //1234
 	Login login = new Login(driver); //1234
 	Home home = new Home(driver);//1234
-	CancelTicket cancelTicket = new CancelTicket();
-	TrackService trackService = new TrackService();
-	TicketStatus ticketStatus = new TicketStatus();
+	CancelTicket cancelTicket = new CancelTicket(driver);//1234
+	TrackService trackService = new TrackService(driver); //1234
+	TicketStatus ticketStatus = new TicketStatus(driver); //1234
 	@Test
 	public void bookBusTicketAndPrint()
 	{
@@ -43,6 +43,7 @@ public class TestCases
 		home.bookTicket();
 		cancelTicket.navigateToCancelTicket();
 		cancelTicket.cancelBusTicket();
+		home.navigateToHome();
 		login.logoutFromApplication();
 		login.closeApplication();
 	}
@@ -57,6 +58,7 @@ public class TestCases
 		home.bookTicket();
 		trackService.navigateToTrackService();
 		trackService.trackBusService();
+		home.navigateToHome();
 		login.logoutFromApplication();
 		login.closeApplication();
 	}
@@ -84,6 +86,7 @@ public class TestCases
 		home.bookTicket();
 		ticketStatus.navigateToTicketStatus();
 		ticketStatus.checkTicketStatus();
+		home.navigateToHome();
 		login.logoutFromApplication();
 		login.closeApplication();
 	}

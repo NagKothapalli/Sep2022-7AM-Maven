@@ -4,7 +4,10 @@ import java.time.Duration;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SpecialUtilities
 {
@@ -14,6 +17,30 @@ public class SpecialUtilities
 	{
 		this.driver = driver;
 		actions = new Actions(driver);
+	}
+	public void clickElement(WebElement element) //100 elements use same method
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		element.click();
+	}	
+	public void clickElement(WebElement element,int timeToWait) //100 elements use same method
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		element.click();
+	}
+	public void enterText(WebElement element,String text) //100 elements use same method
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		element.sendKeys(text);
+	}
+	public void enterText(WebElement element,String text,int timeToWait) //100 elements use same method
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeToWait));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		element.sendKeys(text);
 	}
 	public void clickEnter()
 	{

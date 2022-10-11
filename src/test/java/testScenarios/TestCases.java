@@ -20,8 +20,7 @@ public class TestCases
 	TicketStatus ticketStatus = new TicketStatus(driver); //1234
 	@Test
 	public void bookBusTicketAndPrint()
-	{
-		
+	{		
 		System.out.println("Test Case : BookBusTicketAndPrint ");
 		login.launchApplication();
 		login.loginToApplication();

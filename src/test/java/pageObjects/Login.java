@@ -12,12 +12,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import appUtilities.SpecialUtilities;
+import gUtilities.ReadPropertiesData;
 
 public class Login
 {
 	WebDriver driver; //null
 	SpecialUtilities sp;
 	//WebDriverWait wait; //explicit wait is a dynamic wait but it will wait for a specific webelement
+	ReadPropertiesData rpd;
 	public Login(WebDriver driver) //1234
 	{
 		this.driver = driver;
@@ -25,12 +27,14 @@ public class Login
 		//driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		//implicit wait will be in force for the entire life time of the webdriver instance	
 		PageFactory.initElements(driver, this);
+		rpd = new ReadPropertiesData("TestData/DevData.properties");
 	}
 	@FindBy(xpath = "//a[@title='Home']")      WebElement homeBtn;
 	public void launchApplication()
 	{
 		System.out.println("RC : Launch Application");
-		driver.get("https://www.apsrtconline.in/"); //nullPointerException
+		//driver.get("https://www.apsrtconline.in/"); //nullPointerException
+		driver.get(rpd.readTestData("URL"));
 	}
 	public void loginToApplication()
 	{

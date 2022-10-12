@@ -8,16 +8,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import appUtilities.SpecialUtilities;
+import gUtilities.ReadPropertiesData;
 
 public class Home
 {
 	WebDriver driver; //null
 	SpecialUtilities sp;
+	ReadPropertiesData rpd;
 	public Home(WebDriver driver) //1234
 	{
 		this.driver = driver;
 		sp = new SpecialUtilities(driver);//1234
 		PageFactory.initElements(driver, this);
+		rpd = new ReadPropertiesData("TestData/DevData.properties");
 	}
 	@FindBy(xpath = "//a[@title='Home']")      WebElement homeBtn;
 	@FindBy(xpath = "//input[@name='source']")      WebElement fromCityTxt;
@@ -33,12 +36,12 @@ public class Home
 	public void bookTicket()
 	{
 		System.out.println("RC : Book Ticket");
-		sp.enterText(fromCityTxt, "HYDERABAD");
+		sp.enterText(fromCityTxt, rpd.readTestData("SourceCity"));
 		sp.waitAndClickEnter();
-		sp.enterText(toCityTxt, "GUNTUR");
+		sp.enterText(toCityTxt, rpd.readTestData("DestinationCity"));
 		sp.waitAndClickEnter();
 		sp.clickElement(openCalenderBtn);
-		selectJourneyDate("16");
+		selectJourneyDate(rpd.readTestData("JDate"));
 		sp.clickElement(searchBtn);
 		sp.fixedWait(4);
 	}

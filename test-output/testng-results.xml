@@ -1,17 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
+    <line>
+      <![CDATA[Book a Flight]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to Flight Successfull]]>
+    </line>
+    <line>
+      <![CDATA[Search Flight Successfull]]>
+    </line>
+    <line>
+      <![CDATA[Select Flight Successfull]]>
+    </line>
+    <line>
+      <![CDATA[Book Flight Successfull]]>
+    </line>
+    <line>
+      <![CDATA[Book Car]]>
+    </line>
+    <line>
+      <![CDATA[Book Car Successfull]]>
+    </line>
+    <line>
+      <![CDATA[Book Car Successfull]]>
+    </line>
+    <line>
+      <![CDATA[Book Car Successfull]]>
+    </line>
+    <line>
+      <![CDATA[Book Car Successfull]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17532" started-at="2022-10-12T02:46:55Z" finished-at="2022-10-12T02:47:13Z">
+  <suite name="Suite for Annotations Testing" duration-ms="170" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17532" started-at="2022-10-12T02:46:55Z" finished-at="2022-10-12T02:47:13Z">
-      <class name="testScenarios.TestCases">
-        <test-method status="PASS" signature="bookBusTicketAndPrint()[pri:0, instance:testScenarios.TestCases@305f7627]" name="bookBusTicketAndPrint" duration-ms="17433" started-at="2022-10-12T02:46:55Z" finished-at="2022-10-12T02:47:13Z">
+    <test name="Smoke Test" duration-ms="170" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
+      <class name="practiceTestNG.PracticeTestNG">
+        <test-method status="PASS" signature="launchApplication()[pri:0, instance:practiceTestNG.PracticeTestNG@56ac3a89]" name="launchApplication" is-config="true" duration-ms="39" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bookBusTicketAndPrint -->
-      </class> <!-- testScenarios.TestCases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- launchApplication -->
+        <test-method status="PASS" signature="loginApplication()[pri:0, instance:practiceTestNG.PracticeTestNG@56ac3a89]" name="loginApplication" is-config="true" duration-ms="2" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginApplication -->
+        <test-method status="PASS" signature="bookFlight()[pri:0, instance:practiceTestNG.PracticeTestNG@56ac3a89]" name="bookFlight" duration-ms="23" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Book a Flight]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to Flight Successfull]]>
+            </line>
+            <line>
+              <![CDATA[Search Flight Successfull]]>
+            </line>
+            <line>
+              <![CDATA[Select Flight Successfull]]>
+            </line>
+            <line>
+              <![CDATA[Book Flight Successfull]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bookFlight -->
+        <test-method status="PASS" signature="logoutApplication()[pri:0, instance:practiceTestNG.PracticeTestNG@56ac3a89]" name="logoutApplication" is-config="true" duration-ms="1" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutApplication -->
+        <test-method status="PASS" signature="loginApplication()[pri:0, instance:practiceTestNG.PracticeTestNG@56ac3a89]" name="loginApplication" is-config="true" duration-ms="1" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginApplication -->
+        <test-method status="PASS" signature="bookCar()[pri:0, instance:practiceTestNG.PracticeTestNG@56ac3a89]" name="bookCar" duration-ms="2" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Book Car]]>
+            </line>
+            <line>
+              <![CDATA[Book Car Successfull]]>
+            </line>
+            <line>
+              <![CDATA[Book Car Successfull]]>
+            </line>
+            <line>
+              <![CDATA[Book Car Successfull]]>
+            </line>
+            <line>
+              <![CDATA[Book Car Successfull]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bookCar -->
+        <test-method status="PASS" signature="logoutApplication()[pri:0, instance:practiceTestNG.PracticeTestNG@56ac3a89]" name="logoutApplication" is-config="true" duration-ms="1" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutApplication -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:practiceTestNG.PracticeTestNG@56ac3a89]" name="closeApplication" is-config="true" duration-ms="0" started-at="2022-10-15T04:07:51Z" finished-at="2022-10-15T04:07:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- practiceTestNG.PracticeTestNG -->
+    </test> <!-- Smoke Test -->
+  </suite> <!-- Suite for Annotations Testing -->
 </testng-results>
